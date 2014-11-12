@@ -1,0 +1,35 @@
+CS3753 (Operating Systems)
+Spring 2012
+University of Colorado Boulder
+Programming Assignment 2
+Public Code
+
+By Andy Sayler - 2012
+http://www.andysayler.com
+
+With help from:
+Junho Ahn - 2012
+
+Adopted from previous code by
+ Chris Wailes <chris.wailes@gmail.com> - 2010
+ Wei-Te Chen <weite.chen@colorado.edu> - 2011
+
+---Files---
+All files except for multilookup.c were written by the above accredited people.
+
+---Executables---
+multi-lookup - This program andles DNS requests from input files passed to the program and outputs them to a file.  It does this via multithreading and solves the classic producer consumer problem.
+
+---Examples---
+Build:
+ make
+
+Clean:
+ make clean
+
+Lookup DNS info for all names files in input folder:
+ ./multi-lookup names.txt results.txt
+
+Check queue for memory leaks:
+ valgrind --tool=memcheck ./multi-lookup names.txt results.txt
+
