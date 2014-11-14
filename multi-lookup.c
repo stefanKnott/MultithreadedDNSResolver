@@ -121,6 +121,7 @@ int main(int argc, char* argv[])
 {	
 
 	int num_cores = sysconf(_SC_NPROCESSORS_ONLN); 
+	//Set number of resolver threads equal to number of cores on machine
 	int num_res_threads = num_cores >= MIN_RESOLVER_THREADS ? num_cores : MIN_RESOLVER_THREADS;
 	int num_req_threads;
 	output_file = fopen(argv[(argc-1)], "w");
