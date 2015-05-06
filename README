@@ -24,7 +24,7 @@ Build:
 Clean:
  make clean
 
-Lookup DNS info for all names files in input folder and output into file listed last:
- ./multi-lookup names.txt results.txt
-
+Lookup DNS info for names files (can handle multiple) and output into file listed last:
+ example/ ./multi-lookup names.txt results.txt
+ example/ ./multi-lookup names1.txt names2.txt results.txt
 
